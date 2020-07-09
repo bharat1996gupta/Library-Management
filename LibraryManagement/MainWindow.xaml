@@ -1,0 +1,141 @@
+﻿<Window x:Class="LibraryManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryManagement"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="Body_Content_DataGrid_Centering"
+        TargetType="{x:Type DataGridCell}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <!--=========COLUMNS = 9=========-->
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+
+        <!--=========ROWS = 13=========-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <!--=========LIBRARY MEMBERS DATA GRID=========-->
+
+        <DataGrid Name ="LibraryMembersDataGrid"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="1"
+                  Grid.RowSpan="6"
+                  AutoGenerateColumns="False"
+                  CellStyle="{StaticResource Body_Content_DataGrid_Centering}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Members" 
+                                    Width="*"   
+                                    IsReadOnly="True"
+                                    Binding="{Binding Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--=========LIBRARY MEDIA DATA GRID=========-->
+
+        <DataGrid Name="LibraryMediaDataGrid"
+                  Grid.Row="1"
+                  Grid.Column="3"
+                  Grid.ColumnSpan="7"
+                  Grid.RowSpan="9"
+                  AutoGenerateColumns="False"
+                  CellStyle="{StaticResource Body_Content_DataGrid_Centering}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Serial" 
+                                    IsReadOnly="True" 
+                                    Width="0.4*"
+                                    Binding="{Binding SerialNumber}"/>
+                <DataGridTextColumn Header="Title" 
+                                    IsReadOnly="True" 
+                                    Width="1.4*"
+                                    Binding="{Binding Title}"/>
+                <DataGridTextColumn Header="Media Type" 
+                                    IsReadOnly="True" 
+                                    Width="0.7*"
+                                    Binding="{Binding MediaType}"/>
+                <!--<DataGridTextColumn Header="Lent Count" 
+                                    IsReadOnly="True" 
+                                    Width="0.7*"
+                                    Binding="{Binding NumberOfTimesLent}"/>-->
+
+                <DataGridCheckBoxColumn Header="Available" 
+                                    IsReadOnly="True" 
+                                    Width="0.6*"
+                                    Binding="{Binding BorrowedOrAvailable}"/>
+                <DataGridTextColumn Header="Borrower" 
+                                    IsReadOnly="True" 
+                                    Width="0.5*"
+                                    Binding="{Binding BorrowerName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--=========LIBRARY MEDIA LENTING BUTTON=========-->
+
+        <Button Name="LentButton"
+                 Content="Lent Media"
+                 Grid.Column="2"
+                Grid.Row="12" 
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="2" 
+                Click="LentButton_Click"/>
+
+
+        <!--=========LIBRARY MEDIA RETURNING BUTTON=========-->
+
+        <Button Name="ReturnButton"
+                 Content="Return Media"
+                 Grid.Column="7"
+                Grid.Row="12"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="2" 
+                Click="ReturnButton_Click" />
+
+    </Grid>
+</Window>

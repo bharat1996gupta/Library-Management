@@ -1,0 +1,14 @@
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojAssemblyReference.cache
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\MainWindow.g.cs
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\App.g.cs
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement_MarkupCompile.cache
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement_MarkupCompile.lref
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\MainWindow.baml
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.g.resources
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.cache
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
+C:\ISI\D05(C#)\FINAL PROJECT\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
